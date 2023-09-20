@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+	body{margin: 0;}
+	.wrap{width: 1000px; margin:auto;}
+	.flex {display: flex;}
+	.bg-blue{background-color: blue;}
+		.bg-red{background-color: red;}
+		.bg-yellow{background-color: yellow;}
+		.bg-gray{background-color: gray}
+		.bg-black{background-color: black;}
+	.col-2{height: 1060px;}
+	.col-1{width: 800px; height: 200px; margin-top: 160px; position: absolute; margin-left: -20px;}
+	.col-3{width: 300px; height:300px; margin-top: -800px; margin-left:360px; position: absolute;}
+	.col-4{width: 300px; height:300px; margin-top: -700px; margin-left: 750px; rotate:-7deg; ;position: absolute;}
+	.col-5{width: 550px; height:1055px; margin-top: -845px; margin-left: 1353px; position: absolute; z-index: 0;}
+	.col-6{width: 280px; height:100px; margin-top: 270px; margin-left: 10px; position: absolute;}
+	.bg-section{background: url(qz.jpg);
+		background-size: 100% auto;}
+	.bg-section1{background: url(doorlock.png);
+		background-size: 100% auto;}
+	h1{margin: 0px 0px; font-weight:normal; font-style: normal; font-size: 2.5em; color: white; text-align: center;
+		font-family: 'SBAggroB'}
+	#container{display: flex;}
+	.half{width: 50vw; background: yellow;}
+	.third{height: 20vh; background: red; width: 250px; margin-left: 150px; margin-top: 200px; position: absolute; z-index: 1;}
+</style>
+<body>
+	<section>
+	<div class="col-2 bg-section">
+	<div class="col-1" style="margin-top:430px;"><h1 style="margin: 80px;">이 양계장에서 탈출하기 위해서는</h1>
+	<div class="col-1"><h1> 네 몸 색과 총 병아리 수를 맞춰야 해.</h1>
+	<div class="col-3"><h2>9월 15일 메모장</h2>
+		<h2>오늘 태어난 병아리: ??? <br> (총 병아리: 450마리)</h2><h2>오늘 낳은 알 수: 150개</h2></div>
+	<div class="col-4"><h2>9월 16일 메모장</h2>
+		<h2>오늘 태어난 병아리: 120 <br> (총 병아리: ???마리)</h2><h2>오늘 낳은 알 수: ???개 (총 600개)</h2>
+	</div>
+	<div class="col-5 bg-section1" style="position: absolute; z-index: 0;">
+		<div id= "container">
+			<div class="third" id="w1">
+		<div id="m1"></div>
+		<input type="color" id="c1">
+		<div class="col-6">
+		<input type="text" id="h" placeholder="15일 총 병아리 수">
+<input type="text" id="k" placeholder="16일에 태어난 병아리 수">
+<button id= "g">확인</button>
+<div id = "monitor"></div>
+	</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+		var c1 = document.getElementById('c1');
+		var w1 = document.getElementById('w1');
+		var m1 = document.getElementById('m1');
+
+		c1.oninput = function(){
+			w1.style.background = c1.value;
+			m1.innerHTML = c1.value;
+		}
+
+		g.onclick = function(){
+		let b = h.value/1 + k.value/1;
+		monitor.innerHTML = "입력된 값은" + b + "마리 입니다." + "정답은 570마리 입니다.";
+		}
+		if(k.value == '16일 병아리'){
+		let b = h.value/1 + k.value/1;
+		monitor.innerHTML = "입력된 값은" + b + "마리 입니다." + "정답은 570마리 입니다.";
+		}
+
+	</script>
+</script>
+</body>
+</html>
